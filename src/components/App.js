@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import AddTodo from './add-todo';
-import TodoList from './todo-list';
-import Footer from './footer';
+import AddTodo from './AddTodo';
+import TodoList from './TodoList';
+import Footer from './Footer';
 
 class App extends Component {
   render() {

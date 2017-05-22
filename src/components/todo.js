@@ -5,7 +5,9 @@ const Todo = ({ id, text, completed, onClick }) => {
   return (
     <li
       key={id}
-      className={completed ? "completed" : "" }
+      style={{
+        textDecoration: completed ? 'line-throught' : 'none'
+      }}
       onClick={onClick}
     >
       {text}
