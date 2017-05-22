@@ -1,14 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Todo from './todo';
 
-const TodoList = () => {
+const TodoList = ({ todos = [], onTodoClick = () => {} }) => {
   return (
     <div className="todo-list">
       <ul>
-        <li>Go shopping</li>
-        <li>Write a diary</li>
+        {
+          todos.map((todo) => (
+            <Todo
+              id={todo.id}
+              text={todo.text}
+              completed={todo.completed}
+              onClick={onTodoClick}
+            />
+          ))
+        }
       </ul>
     </div>
   );
+};
+
+TodoList.propTypes = {
+  todos: PropTypes.array,
+  onTodoClick: PropTypes.func,
 };
 
 export default TodoList;
