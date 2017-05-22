@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 const AddTodo = ({ input, onKeyPress, onInputChange }) => {
   return (
     <div className="add-todo">
+      {"Add"}
+      {" "}
       <input
         type='text'
         value={input}

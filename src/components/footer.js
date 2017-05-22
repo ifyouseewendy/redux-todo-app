@@ -4,15 +4,17 @@ import Link from './Link';
 
 const Footer = ({ filter, onFilterClick }) => {
   return (
-    <p>
-      Show:
-      {" "}
-      <Link active={filter === "All"} children="All" onClick={onFilterClick} />
-      {", "}
-      <Link active={filter === "Active"} children="Active" onClick={onFilterClick} />
-      {", "}
-      <Link active={filter === "Completed"} children="Completed" onClick={onFilterClick} />
-    </p>
+    <div className="footer">
+      <p>
+        Show
+        {" "}
+        <Link active={filter === "All"} children="All" onClick={onFilterClick} />
+        {", "}
+        <Link active={filter === "Active"} children="Active" onClick={onFilterClick} />
+        {", "}
+        <Link active={filter === "Completed"} children="Completed" onClick={onFilterClick} />
+      </p>
+    </div>
   );
 };
 

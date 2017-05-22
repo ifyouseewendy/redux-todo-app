@@ -14,6 +14,14 @@
   color: white;
 }
 
+.App-body {
+  text-align: left;
+  width: 400px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .App-intro {
   font-size: large;
 }

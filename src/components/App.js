@@ -56,20 +56,22 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Todo App</h2>
         </div>
-        <AddTodo
-          input={this.state.input}
-          onKeyPress={this.onKeyPress}
-          onInputChange={this.onInputChange}
-        />
-        <TodoList
-          todos={this.state.todos}
-          onTodoClick={this.onTodoClick}
-          filter={this.state.filter}
-        />
-        <Footer
-          filter={this.state.filter}
-          onFilterClick={this.onFilterClick}
-        />
+        <div className="App-body">
+          <AddTodo
+            input={this.state.input}
+            onKeyPress={this.onKeyPress}
+            onInputChange={this.onInputChange}
+          />
+          <TodoList
+            todos={this.state.todos}
+            onTodoClick={this.onTodoClick}
+            filter={this.state.filter}
+          />
+          <Footer
+            filter={this.state.filter}
+            onFilterClick={this.onFilterClick}
+          />
+        </div>
       </div>
     );
   }
