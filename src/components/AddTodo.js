@@ -1,24 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const AddTodo = ({ value = '', onChange = () => {} }) => {
+const AddTodo = ({ input, onInputChange }) => {
   return (
     <div className="add-todo">
-      <form>
-        <input
-          type='text'
-          placeholder='add todo'
-          value={value}
-          onChange={onChange}
-        />
-      </form>
+      <input
+        type='text'
+        value={input}
+        onChange={onInputChange}
+      />
     </div>
   );
 };
 
 AddTodo.propTypes = {
-  value: PropTypes.string,
-  onChange: PropTypes.func,
+  input: PropTypes.string,
+  onInputChange: PropTypes.func,
 };
 
 export default AddTodo;
