@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AddTodo from './AddTodo';
-import TodoList from './TodoList';
 import Footer from './Footer';
+import VisibleTodoList from "../containers/VisibleTodoList";
 
 class App extends Component {
   constructor(props) {
@@ -62,11 +62,7 @@ class App extends Component {
             onKeyPress={this.onKeyPress}
             onInputChange={this.onInputChange}
           />
-          <TodoList
-            todos={this.state.todos}
-            onTodoClick={this.onTodoClick}
-            filter={this.state.filter}
-          />
+          <VisibleTodoList />
           <Footer
             filter={this.state.filter}
             onFilterClick={this.onFilterClick}
