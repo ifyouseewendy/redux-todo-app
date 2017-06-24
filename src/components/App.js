@@ -63,10 +63,7 @@ class App extends Component {
             onInputChange={this.onInputChange}
           />
           <VisibleTodoList />
-          <Footer
-            filter={this.state.filter}
-            onFilterClick={this.onFilterClick}
-          />
+          <Footer />
         </div>
       </div>
     );

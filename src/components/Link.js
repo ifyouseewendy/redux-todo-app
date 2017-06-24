@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Link = ({ active, onClick, children }) => {
+const Link = ({ active, children, onClick }) => {
   if (active) {
     return <span>{children}</span>;
   }
@@ -10,7 +10,7 @@ const Link = ({ active, onClick, children }) => {
     <a href="#"
       onClick={e => {
         e.preventDefault();
-        onClick(children);
+        onClick();
       }}
     >
       {children}

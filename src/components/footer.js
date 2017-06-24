@@ -1,26 +1,29 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Link from './Link';
+import FilterLink from '../containers/FilterLink';
+import { VisibilityFilter } from "../actions";
 
-const Footer = ({ filter, onFilterClick }) => {
+const { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } = VisibilityFilter;
+
+const Footer = () => {
   return (
     <div className="footer">
       <p>
         Show
         {" "}
-        <Link active={filter === "All"} children="All" onClick={onFilterClick} />
+        <FilterLink filter={ SHOW_ALL }>
+          All
+        </FilterLink>
         {", "}
-        <Link active={filter === "Active"} children="Active" onClick={onFilterClick} />
+        <FilterLink filter={ SHOW_COMPLETED }>
+          Completed
+        </FilterLink>
         {", "}
-        <Link active={filter === "Completed"} children="Completed" onClick={onFilterClick} />
+        <FilterLink filter={ SHOW_ACTIVE }>
+          Active
+        </FilterLink>
       </p>
     </div>
   );
-};
-
-Footer.propTypes = {
-  filter: PropTypes.string.isRequired,
-  onFilterClick: PropTypes.func.isRequired,
 };
 
 export default Footer;
