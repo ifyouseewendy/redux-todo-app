@@ -1,9 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import AddTodo from '../containers/AddTodo';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import AddTodo from "../containers/AddTodo";
 import VisibleTodoList from "../containers/VisibleTodoList";
-import Footer from './Footer';
+import Footer from "./Footer";
 
 const App = () => (
   <div className="App">
@@ -12,7 +12,7 @@ const App = () => (
       <h2>Todo App</h2>
     </div>
     <div className="App-body">
-      <AddTodo/>
+      <AddTodo />
       <VisibleTodoList />
       <Footer />
     </div>

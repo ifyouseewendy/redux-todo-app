@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Todo from './Todo';
+import React from "react";
+import PropTypes from "prop-types";
+import Todo from "./Todo";
 
 const TodoList = ({ todos, onTodoClick }) => (
   <div className="todo-list">
@@ -20,7 +20,6 @@ TodoList.propTypes = {
     }).isRequired
   ).isRequired,
   onTodoClick: PropTypes.func.isRequired,
-  filter: PropTypes.string
 };
 
 export default TodoList;
