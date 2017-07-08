@@ -31,5 +31,11 @@
     "build": "react-scripts build",
     "test": "jest --watch",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "collectCoverage": true
   }
 }
